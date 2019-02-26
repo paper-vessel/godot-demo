@@ -13,11 +13,21 @@ _global_script_class_icons={
 
 }
 
+[android]
+
+modules="org/godotengine/godot/firebase/Auth"
+
 [application]
 
 config/name="Firebase Auth"
 run/main_scene="res://firebase_auth.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/handheld/orientation="sensor_landscape"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [rendering]
 
