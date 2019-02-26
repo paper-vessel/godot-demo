@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://firebase_auth.gd" type="Script" id=1]
+[ext_resource path="res://google_icon.png" type="Texture" id=2]
+[ext_resource path="res://facebook_icon.png" type="Texture" id=3]
+
+[node name="FirebaseAuth" type="FirebaseAuth"]
+script = ExtResource( 1 )
+
+[node name="Sign" type="VBoxContainer" parent="."]
+margin_right = 334.0
+margin_bottom = 601.0
+alignment = 1
+
+[node name="SignInButton" type="OptionButton" parent="Sign"]
+margin_top = 253.0
+margin_right = 334.0
+margin_bottom = 273.0
+text = "Choose Sign method"
+align = 1
+
+[node name="SignOutButton" type="Button" parent="Sign"]
+margin_top = 277.0
+margin_right = 334.0
+margin_bottom = 347.0
+rect_min_size = Vector2( 0, 70 )
+text = "Sign out"
+
+[node name="Link" type="VBoxContainer" parent="."]
+margin_left = 669.805
+margin_right = 1003.81
+margin_bottom = 601.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="GoogleButton" type="Button" parent="Link"]
+margin_top = 220.0
+margin_right = 334.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 0, 70 )
+text = "LINKED"
+icon = ExtResource( 2 )
+
+[node name="FacebookButton" type="Button" parent="Link"]
+margin_top = 310.0
+margin_right = 334.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 0, 70 )
+text = "LINKED"
+icon = ExtResource( 3 )
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+visible = true
+margin_right = 382.0
+margin_bottom = 189.0
+
+[node name="CenterContainer" type="CenterContainer" parent="AcceptDialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 374.0
+margin_bottom = 153.0
+
+[node name="LineEdit" type="LineEdit" parent="AcceptDialog/CenterContainer"]
+margin_left = 108.0
+margin_top = 60.0
+margin_right = 258.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 150, 0 )
+placeholder_text = "place custom token"
+
+[node name="Label" type="Label" parent="AcceptDialog/CenterContainer"]
+margin_left = 183.0
+margin_top = 65.0
+margin_right = 183.0
+margin_bottom = 79.0
+align = 1
+valign = 1
+
